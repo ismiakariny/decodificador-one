@@ -1,0 +1,18 @@
+.invisivel {
+    display: none;
+}
+
+#linha-horizontal {
+    width: auto;
+    border: 1px solid #0A3871;
+}
+
+.copyright {
+    color: #000000;
+    font-size: 13px;
+    margin: 20px 0 0;
+}
+
+#link-footer {
+    text-decoration: none;
+}
