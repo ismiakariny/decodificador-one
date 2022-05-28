@@ -1,3 +1,7 @@
+body {
+    background-color: #E5E5E5;
+}
+
 .invisivel {
     display: none;
 }
@@ -8,6 +12,7 @@
 }
 
 .copyright {
+    text-align: center;
     color: #000000;
     font-size: 13px;
     margin: 20px 0 0;
@@ -15,4 +20,5 @@
 
 #link-footer {
     text-decoration: none;
+    color: #0A3871;
 }
