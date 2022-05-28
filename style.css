@@ -1,5 +1,35 @@
 body {
-    background-color: #E5E5E5;
+    background-color: #F3F5FC;
+}
+
+header {
+    padding: 2em 4em;
+}
+
+.entrada-do-texto {
+    display: block;
+    position: inline-block;
+    vertical-align: top;
+    margin: 1em 6em;
+    width: 45%;
+    height: 40%;
+    border: none;
+    background: none;
+    font-family: 'Inter';
+    font-size: 2em;
+    font-weight: 400;
+    color: #0A3871;
+}
+
+textarea:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+
+textarea::placeholder {
+    font-family: 'Inter';
+    font-weight: 400;
+    color: #0A3871;
 }
 
 .invisivel {
