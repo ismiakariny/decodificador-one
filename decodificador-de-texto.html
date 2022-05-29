@@ -14,15 +14,22 @@
 			<h1><img src="logo.svg"></h1>
 		</header>
 		<main>
-			<div class="campo-de-entrada">
+			<section class="campo-de-entrada">
 				<textarea name="texto-de-entrada" type="text" class="entrada-do-texto" placeholder="Digite seu texto" required></textarea>
-				<input name ="bt-criptografar" type="submit" value="Descriptografar" class="botao-descriptografar">
-				<input name ="bt-descriptografar" type="submit" value="Criptografar" class="botao-criptografar">
-			</div>
 
-			<div class="campo-de-saida">
-				<button id="botao-copiar" class="invisivel">Copiar</button>
-			</div>
+				<div class="botoes-de-entrada">
+					<input name ="bt-criptografar" type="submit" value="Criptografar" class="botao-criptografar">
+					<input name ="bt-descriptografar" type="submit" value="Descriptografar" class="botao-descriptografar">
+				</div>
+			</section>
+			<section class="campo-de-saida">
+				<div id="caixa">
+					<img src="boneco-com-lupa.svg" id="imagem-msg">
+					<h2>Nenhuma mensagem encontrada</h2>
+					<p>Digite um texto que você deseja criptografar ou desscriptografar</p>
+					<button id="botao-copiar" class="invisivel">Copiar</button>
+				</div>
+			</section>
 		</main>
 	</body>
 

@@ -6,12 +6,19 @@ header {
     padding: 2em 4em;
 }
 
+.campo-de-entrada {
+    float:left;
+    width: 70%;
+    height: 500px;
+    padding: 0 auto;
+    margin: 0 5%;
+}
+
 .entrada-do-texto {
-    display: block;
-    position: inline-block;
-    vertical-align: top;
-    margin: 1em 6em;
-    width: 45%;
+    display: inline-block;
+    margin: 0 15% 10% 15%;
+    padding-right: 1.5em;
+    width: 70%;
     height: 40%;
     border: none;
     background: none;
@@ -19,6 +26,89 @@ header {
     font-size: 2em;
     font-weight: 400;
     color: #0A3871;
+}
+
+.botoes-de-entrada {
+    display: block;
+    position: relative;
+    vertical-align: baseline;
+    margin: 10% 15%;
+    padding-right: 1.5em;
+}
+
+.botao-criptografar {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1em;
+    color: #FFFFFF;
+    text-align: center;
+    width: 45%;
+    padding: 1em;
+    background: #0A3871;
+    border-radius: 24px;
+    border: none;
+}
+
+.botao-descriptografar {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1em;
+    color: #0A3871;
+    text-align: center;
+    width: 45%;
+    padding: 1em;
+    border-radius: 24px;
+    border-color: #0A3871;
+}
+
+.campo-de-saida {
+    display: block;
+    width: 20%;
+    position: absolute;
+    margin: 2em 5%;
+    float: right;
+    top: 10px;
+    right: 10px;
+}
+
+#caixa {
+    position: relative;
+    background: white;
+    /* shadow */
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
+    height: 480px;
+    width: 246px;
+    padding: 1.2em;
+}
+
+#imagem-msg {
+    width: 200px;
+    height: auto;
+    margin: 30% 0.3em;
+}
+
+h2 {
+    font-family: 'Inter';
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #343A40;
+    text-align: center;
+    margin-bottom: 0.5em;
+}
+
+#caixa p {
+    font-family: 'Inter';
+    font-size: 1em;
+    font-weight: 400;
+    color: #495057;
+    text-align: center;
+}
+
+textarea[name=texto-de-entrada] {
+  resize: none;
 }
 
 textarea:focus {
@@ -36,6 +126,13 @@ textarea::placeholder {
     display: none;
 }
 
+footer {
+    display: inline-block;
+    margin: 0;
+    width: 100%;
+    bottom: 1em;
+}
+
 #linha-horizontal {
     width: auto;
     border: 1px solid #0A3871;
@@ -45,7 +142,7 @@ textarea::placeholder {
     text-align: center;
     color: #000000;
     font-size: 13px;
-    margin: 20px 0 0;
+    margin: 15px 0;
 }
 
 #link-footer {
