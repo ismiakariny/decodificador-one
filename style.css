@@ -1,9 +1,29 @@
+html {
+    height: 100%;
+    min-height: 100%;
+}
+
 body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
     background-color: #F3F5FC;
 }
 
 header {
-    padding: 2em 4em;
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+}
+
+h1 {
+    margin: 0 8%;
+    padding: 2em 0;
+}
+
+main {
+    width: 940px;
+    margin: 0 auto;
 }
 
 .campo-de-entrada {
@@ -16,7 +36,7 @@ header {
 
 .entrada-do-texto {
     display: inline-block;
-    margin: 0 15% 10% 15%;
+    margin: 0 15% 10% 0;
     padding-right: 1.5em;
     width: 70%;
     height: 40%;
@@ -30,9 +50,8 @@ header {
 
 .botoes-de-entrada {
     display: block;
-    position: relative;
     vertical-align: baseline;
-    margin: 10% 15%;
+    margin: 10% 15% 10% 0;
     padding-right: 1.5em;
 }
 
@@ -44,6 +63,7 @@ header {
     color: #FFFFFF;
     text-align: center;
     width: 45%;
+    max-width: 20em;
     padding: 1em;
     background: #0A3871;
     border-radius: 24px;
@@ -58,19 +78,21 @@ header {
     color: #0A3871;
     text-align: center;
     width: 45%;
+    max-width: 20em;
     padding: 1em;
     border-radius: 24px;
-    border-color: #0A3871;
+    background: none;
+    border: 1px solid #0A3871;
 }
 
 .campo-de-saida {
     display: block;
     width: 20%;
     position: absolute;
-    margin: 2em 5%;
+    margin: 2.5% auto;
     float: right;
     top: 10px;
-    right: 10px;
+    right: 5%;
 }
 
 #caixa {
@@ -107,6 +129,22 @@ h2 {
     text-align: center;
 }
 
+#botao-copiar {
+    position: absolute;
+    box-sizing: border-box;
+    padding: 1em;
+    margin: 8% 2%;
+    width: 84%;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    background: #FFFFFF;
+    font-family: 'Inter';
+    font-size: 1em;
+    font-weight: 400;
+    color: #0A3871;
+    text-align: center;
+}
+
 textarea[name=texto-de-entrada] {
   resize: none;
 }
@@ -128,7 +166,7 @@ textarea::placeholder {
 
 footer {
     display: inline-block;
-    margin: 0;
+    margin-top: auto;
     width: 100%;
     bottom: 1em;
 }
