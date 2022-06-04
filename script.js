@@ -1,28 +1,53 @@
-//coleta texto enviado pelo usuário
-var textoEnviado = document.getElementById('entrada-do-texto');
-var textoColetado = document.getElementById('resultado');
-
-function coletaTexto() {
-    textoColetado.textContent = textoEnviado.value;
-};
-
-//valida texto antes de processar
-var textovalidado = false;
-
-function validaTexto(texto){
-    if (texto.length < 0){
-    console.log("Você deve inserir um texto");
-    } else {
-    console.log("Seu texto está validado");
-    textoValidado = true;
-}
-
+var textoEnviado = document.querySelector('#entrada-do-texto');
+var textoResultado = document.querySelector('#resultado');
 var botaoCriptografar = document.querySelector('#bt-criptografar');
 var botaoDescriptografar = document.querySelector('#bt-descriptografar');
+var botaoCopiar = document.querySelector('#botao-copiar');
+var areaDeSaida = document.querySelector('#mensagem')
+var nenhumaMensagem = document.querySelector('#nenhuma-mensagem');
 
-botaoCriptografar.addEventListener('click', validaTexto(textoColetado));
+function atualizaAreaDeSaida() {
 
+    if($('#nenhuma-mensagem').not('.invisivel').length) {
+        nenhumaMensagem.classList.add('invisivel');        
+    }
 
-botaoDescriptografar.addEventListener('click', function(){
-    console.log("Fui clicado para descriptografar");
-});
+    if($('#resultado').hasClass('invisivel')) {
+        textoResultado.classList.remove('invisivel');
+    }
+
+    if($('#botao-copiar').hasClass('invisivel'))
+        botaoCopiar.classList.remove('invisivel');    
+};
+
+function criptografa(stringCriptografada) {
+    atualizaAreaDeSaida();
+
+    var matrizCodigo = [["a", "ai"], ["e", "enter"], ["i", "imes"], ["o", "ober"], ["u", "ufat"]];
+    stringCriptografada = stringCriptografada.toLowerCase();
+
+    for(var i = 0; i < matrizCodigo.length; i++) {
+        if(stringCriptografada.includes(matrizCodigo[i][0])){
+            stringCriptografada = stringCriptografada.replaceAll(matrizCodigo[i][0], matrizCodigo[i][1]);
+        };
+    };
+
+    return stringCriptografada;
+};
+
+function btCriptografar() {
+    var textoCriptografado = criptografa(textoEnviado.value);
+    textoResultado = textoCriptografado;
+};
+
+// "a", "ai"
+// "e", "enter"
+// "i", "imes"
+// "o", "ober"
+// "u", "ufat"
+
+// "ai", "a"
+// "enter", "e"
+// "imes", "i"
+// "ober", "o"
+// "ufat", "u"

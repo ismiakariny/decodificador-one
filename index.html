@@ -1,13 +1,16 @@
-<!DOCTYPE.html>
+<!DOCTYPE html>
 <html lang="pt-br">
 	<head>
 		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="reset.css">
+		<link rel="stylesheet" href="style.css">
 
 		<title>Decodificador de Texto</title>
 
-		<link rel="stylesheet" href="reset.css">
-		<link rel="stylesheet" href="style.css">
+
 	</head>
 
 	<body>
@@ -20,23 +23,25 @@
 				<textarea name="texto-de-entrada" type="text" id="entrada-do-texto" placeholder="Digite seu texto" required></textarea>
 
 				<div class="botoes-de-entrada">
-					<button id="bt-criptografar" class="botao-criptografar">Criptografar</button>
+					<button id="bt-criptografar" class="botao-criptografar" onclick="btCriptografar()">Criptografar</button>
 					<button id="bt-descriptografar" class="botao-descriptografar">Descriptografar</button>
 				</div>
 			</section>
 			<section class="campo-de-saida">
 				<div id="caixa">
-					<div id="resultado">
-						<img src="boneco-com-lupa.svg" id="imagem-msg" cl>
-						<h2>Nenhuma mensagem encontrada</h2>
-						<p id="digite-texto">Digite um texto que você deseja criptografar ou descriptografar</p>
-						<p>Teste</p>
+					<div id="mensagem">
+						<div id="nenhuma-mensagem">
+							<img src="boneco-com-lupa.svg" id="imagem-msg">
+							<h5>Nenhuma mensagem encontrada</h5>
+							<h6>Digite um texto que você deseja criptografar ou descriptografar</h6>
+						</div>
+						<textarea name="texto-de-saida" id="resultado" class="invisivel"></textarea>
 					</div>
 					<button name="bt-copiar" id="botao-copiar" class="invisivel">Copiar</button>
 				</div>
 			</section>
 		</main>
-        <script src="decodifica-texto.js"></script>
+        <script src="script.js"></script>
 	</body>
 
 	<footer>

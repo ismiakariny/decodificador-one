@@ -17,11 +17,12 @@ header {
 }
 
 h1 {
-    margin: 0 8%;
+    margin: 0 5%;
     padding: 2em 0;
 }
 
 main {
+    display: flex;
     width: 80%;
     margin: 0 auto;
 }
@@ -35,12 +36,12 @@ main {
     margin: 0 5%;
 }
 
-.entrada-do-texto {
+#entrada-do-texto {
     display: inline-block;
     margin: 0 15% 10% 0;
     padding-right: 1.5em;
     width: 100%;
-    height: 55%;
+    height: 65%;
     border: none;
     background: none;
     font-family: 'Inter';
@@ -50,11 +51,10 @@ main {
 }
 
 .botoes-de-entrada {
-    display: flex-wrap;;
+    display: flex-wrap;
     position: relative;
     vertical-align: baseline;
-    margin: 10% 15% 10% 0;
-    padding-right: 1.5em;
+    margin: 0 auto;
 }
 
 .botao-criptografar {
@@ -64,13 +64,21 @@ main {
     font-size: 1em;
     color: #FFFFFF;
     text-align: center;
-    width: 45%;
+    width: 50%;
     max-width: 20em;
+    min-width: 10em;
     padding: 1em;
+    margin-bottom: 2px;
     background: #0A3871;
     border-radius: 24px;
-    border: none;
+    border: 2px solid #0A3871;
 }
+
+.botao-criptografar:hover {
+    border: 2px solid #051933;
+    background: #0A4575;
+}
+
 
 .botao-descriptografar {
     font-family: 'Inter';
@@ -79,16 +87,22 @@ main {
     font-size: 1em;
     color: #0A3871;
     text-align: center;
-    width: 45%;
+    width: 50%;
     max-width: 20em;
+    min-width: 10em;
     padding: 1em;
+    margin-bottom: 2px;
     border-radius: 24px;
     background: none;
-    border: 1px solid #0A3871;
+    border: 2px solid #0A3871;
+}
+
+.botao-descriptografar:hover {
+    background: #CCD5E0;
 }
 
 .campo-de-saida {
-    display: block;
+    display: inline;
     width: 20%;
     position: absolute;
     margin: 2.5% auto;
@@ -114,7 +128,7 @@ main {
     margin: 30% 0.3em;
 }
 
-h2 {
+h5 {
     font-family: 'Inter';
     font-size: 1.2em;
     font-weight: 700;
@@ -123,7 +137,25 @@ h2 {
     margin-bottom: 0.5em;
 }
 
-#caixa p {
+#mensagem {
+    width: 98%;
+    height: 82%;
+    margin: 0 auto;
+}
+
+#resultado {
+    width: 98%;
+    height: 94%;
+    margin: 0 auto;
+    border: none;
+    font-family: 'Inter';
+    font-size: 1.5em;
+    font-weight: 400;
+    color: #495057;
+    text-align: center;
+}
+
+h6 {
     font-family: 'Inter';
     font-size: 1em;
     font-weight: 400;
@@ -135,7 +167,7 @@ h2 {
     position: absolute;
     box-sizing: border-box;
     padding: 1em;
-    margin: 8% 2%;
+    margin: 6% 2%;
     width: 84%;
     border: 1px solid #0A3871;
     border-radius: 24px;
@@ -147,16 +179,16 @@ h2 {
     text-align: center;
 }
 
-textarea[name=texto-de-entrada] {
+textarea[name=texto-de-entrada], textarea[name=texto-de-saida] {
   resize: none;
 }
 
-textarea:focus {
+textarea:focus, input:focus {
     box-shadow: 0 0 0 0;
     outline: 0;
 }
 
-textarea::placeholder {
+::placeholder {
     font-family: 'Inter';
     font-weight: 400;
     color: #0A3871;
@@ -170,12 +202,11 @@ footer {
     display: inline-block;
     margin-top: auto;
     width: 100%;
-    bottom: 1em;
+    min-width: 100%;
 }
 
 #linha-horizontal {
-    width: auto;
-    border: 1px solid #0A3871;
+    border-top: 1px solid #0A3871;
 }
 
 .copyright {
