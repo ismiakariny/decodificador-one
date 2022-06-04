@@ -20,10 +20,29 @@ function atualizaAreaDeSaida() {
         botaoCopiar.classList.remove('invisivel');    
 };
 
-function criptografa(stringCriptografada) {
+function criptografa(stringParaCriptografar) {
     atualizaAreaDeSaida();
 
     var matrizCodigo = [["a", "ai"], ["e", "enter"], ["i", "imes"], ["o", "ober"], ["u", "ufat"]];
+    stringParaCriptografar = stringParaCriptografar.toLowerCase();
+
+    for(var i = 0; i < matrizCodigo.length; i++) {
+        if(stringParaCriptografar.includes(matrizCodigo[i][0])){
+            stringParaCriptografar = stringParaCriptografar.replaceAll(matrizCodigo[i][0], matrizCodigo[i][1]);
+        };
+    };
+
+    return stringParaCriptografar;
+};
+
+function btCriptografar() {
+    var textoCriptografado = criptografa(textoEnviado.value);
+    textoResultado.textContent = textoCriptografado;
+};
+
+function descriptografa(stringCriptografada) {
+
+    var matrizCodigo = [["ai", "a"], ["enter", "e"], ["imes", "i"], ["ober", "o"], ["ufat", "u"]];
     stringCriptografada = stringCriptografada.toLowerCase();
 
     for(var i = 0; i < matrizCodigo.length; i++) {
@@ -33,12 +52,13 @@ function criptografa(stringCriptografada) {
     };
 
     return stringCriptografada;
-};
+}
 
-function btCriptografar() {
-    var textoCriptografado = criptografa(textoEnviado.value);
-    textoResultado.textContent = textoCriptografado;
-};
+function btDescriptografar() {
+        var textoDescriptografado = descriptografa(textoResultado.value);
+        textoResultado.textContent = textoDescriptografado;
+        console.log(textoResultado.textContent);
+}
 
 // "a", "ai"
 // "e", "enter"
