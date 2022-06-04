@@ -168,7 +168,7 @@ h6 {
     padding: 1em;
     margin: 6% 2%;
     width: 84%;
-    border: 1px solid #0A3871;
+    border: 2px solid #0A3871;
     border-radius: 24px;
     background: #FFFFFF;
     font-family: 'Inter';
@@ -176,6 +176,10 @@ h6 {
     font-weight: 400;
     color: #0A3871;
     text-align: center;
+}
+
+#botao-copiar:hover {
+    background: #CCD5E0;
 }
 
 textarea[name=texto-de-entrada], textarea[name=texto-de-saida] {

@@ -60,14 +60,7 @@ function btDescriptografar() {
         console.log(textoResultado.textContent);
 }
 
-// "a", "ai"
-// "e", "enter"
-// "i", "imes"
-// "o", "ober"
-// "u", "ufat"
-
-// "ai", "a"
-// "enter", "e"
-// "imes", "i"
-// "ober", "o"
-// "ufat", "u"
+botaoCopiar.addEventListener('click', function(event) {
+  textoResultado.select();
+  document.execCommand('copy');  
+});
