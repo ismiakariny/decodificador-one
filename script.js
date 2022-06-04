@@ -37,7 +37,7 @@ function criptografa(stringCriptografada) {
 
 function btCriptografar() {
     var textoCriptografado = criptografa(textoEnviado.value);
-    textoResultado = textoCriptografado;
+    textoResultado.textContent = textoCriptografado;
 };
 
 // "a", "ai"
