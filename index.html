@@ -16,12 +16,12 @@
 	<body>
 
 		<header>
-			<h1><img src="logo.svg"></h1>
+			<h1><img src="logo.svg" alt="Logo da Alura"></h1>
 		</header>
 		<main>
 			<section class="campo-de-entrada">
 				<textarea name="texto-de-entrada" type="text" id="entrada-do-texto" placeholder="Digite seu texto" required></textarea>
-
+				<span class="info">&#128712; Apenas letras minúsculas e sem acento.</span>
 				<div class="botoes-de-entrada">
 					<button id="bt-criptografar" class="botao-criptografar" onclick="btCriptografar()">Criptografar</button>
 					<button id="bt-descriptografar" class="botao-descriptografar" onclick="btDescriptografar()">Descriptografar</button>
@@ -31,7 +31,7 @@
 				<div id="caixa">
 					<div id="mensagem">
 						<div id="nenhuma-mensagem">
-							<img src="boneco-com-lupa.svg" id="imagem-msg">
+							<img src="boneco-com-lupa.svg" id="imagem-msg" alt="Ilustração de um boneco utilizando uma lupa">
 							<h5>Nenhuma mensagem encontrada</h5>
 							<h6>Digite um texto que você deseja criptografar ou descriptografar</h6>
 						</div>

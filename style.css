@@ -11,25 +11,24 @@ body {
 }
 
 header {
-    position: relative;
     width: 100%;
     margin: 0 auto;
 }
 
 h1 {
     margin: 0 5%;
-    padding: 2em 0;
+    padding-top: 2em;
 }
 
 main {
     display: flex;
+    align-items: flex-start;
+    justify-content: center safe;
     width: 80%;
     margin: 0 auto;
 }
 
 .campo-de-entrada {
-    display: ;
-    float:left;
     width: 65%;
     height: 500px;
     padding: 0 auto;
@@ -37,8 +36,7 @@ main {
 }
 
 #entrada-do-texto {
-    display: inline-block;
-    margin: 0 15% 10% 0;
+    margin: 5% 15% 5% 0;
     padding-right: 1.5em;
     width: 100%;
     height: 65%;
@@ -48,6 +46,15 @@ main {
     font-size: 2em;
     font-weight: 400;
     color: #0A3871;
+}
+
+.info {
+    display: flex;
+    font-family: 'Inter';
+    font-weight: 400;
+    color: #495057;
+    font-size: 0.75em;
+    padding-bottom: 1em;
 }
 
 .botoes-de-entrada {
@@ -66,7 +73,7 @@ main {
     text-align: center;
     width: 50%;
     max-width: 20em;
-    min-width: 10em;
+    min-width: 9em;
     padding: 1em;
     margin-bottom: 2px;
     background: #0A3871;
@@ -75,8 +82,7 @@ main {
 }
 
 .botao-criptografar:hover {
-    border: 2px solid #051933;
-    background: #0A4575;
+    color:lightgray;
 }
 
 
@@ -89,7 +95,7 @@ main {
     text-align: center;
     width: 50%;
     max-width: 20em;
-    min-width: 10em;
+    min-width: 9em;
     padding: 1em;
     margin-bottom: 2px;
     border-radius: 24px;
@@ -102,30 +108,25 @@ main {
 }
 
 .campo-de-saida {
-    display: inline;
-    width: 20%;
-    position: absolute;
-    margin: 2.5% auto;
-    float: right;
-    top: 10px;
-    right: 5%;
+    width: 30%;
+    height: 440px;
+    margin-bottom: 5%;
+    padding: 1em;
 }
 
 #caixa {
-    position: relative;
+    height: 100%;
+    width: 260px;
     background: white;
-    /* shadow */
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
     border-radius: 32px;
-    height: 480px;
-    width: 246px;
-    padding: 1.2em;
+    padding: 1em;
 }
 
 #imagem-msg {
-    width: 200px;
+    width: 90%;
     height: auto;
-    margin: 30% 0.3em;
+    margin: 20% auto;
 }
 
 h5 {
@@ -163,11 +164,10 @@ h6 {
 }
 
 #botao-copiar {
-    position: absolute;
     box-sizing: border-box;
     padding: 1em;
-    margin: 6% 2%;
-    width: 84%;
+    margin: 6% auto;
+    width: 100%;
     border: 2px solid #0A3871;
     border-radius: 24px;
     background: #FFFFFF;
@@ -179,7 +179,7 @@ h6 {
 }
 
 #botao-copiar:hover {
-    background: #CCD5E0;
+    background: #EFF2F5;
 }
 
 textarea[name=texto-de-entrada], textarea[name=texto-de-saida] {
@@ -216,10 +216,34 @@ footer {
     text-align: center;
     color: #000000;
     font-size: 13px;
-    margin: 15px 0;
+    margin: 10px 0;
 }
 
 #link-footer {
     text-decoration: none;
     color: #0A3871;
+}
+
+@media screen and (max-width: 480px) {
+    main {
+        margin: 0 auto;
+        display: flex;
+        justify-content: center safe;
+        flex-direction: column;
+    }
+
+    .campo-de-entrada {
+        width: 90%;
+        margin: 1em auto 0 auto;        
+    }
+
+    .campo-de-saida, #imagem-msg {
+        width: 90%;
+        margin: 1.5em auto 2em auto;
+    }
+
+    .botoes-de-entrada {
+        display: flex;
+    }
+
 }

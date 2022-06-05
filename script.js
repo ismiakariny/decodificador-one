@@ -41,6 +41,7 @@ function btCriptografar() {
 };
 
 function descriptografa(stringCriptografada) {
+    atualizaAreaDeSaida();
 
     var matrizCodigo = [["ai", "a"], ["enter", "e"], ["imes", "i"], ["ober", "o"], ["ufat", "u"]];
     stringCriptografada = stringCriptografada.toLowerCase();
@@ -55,9 +56,8 @@ function descriptografa(stringCriptografada) {
 }
 
 function btDescriptografar() {
-        var textoDescriptografado = descriptografa(textoResultado.value);
+        var textoDescriptografado = descriptografa(textoEnviado.value);
         textoResultado.textContent = textoDescriptografado;
-        console.log(textoResultado.textContent);
 }
 
 botaoCopiar.addEventListener('click', function(event) {
