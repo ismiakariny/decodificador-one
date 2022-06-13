@@ -82,7 +82,7 @@ main {
 }
 
 .botao-criptografar:hover {
-    color:lightgray;
+    background: #0E52A4;
 }
 
 
@@ -239,13 +239,14 @@ footer {
 
     .campo-de-entrada {
         width: 90%;
-        margin: 5% auto;        
+        margin: 0 auto;        
     }
 
-    #entrada-do-texto, #caixa {
+    #entrada-do-texto {
         width: 90%;
-        margin: 0 auto;
-        padding: 0.3em;
+        height: 60%;
+        margin: 0.5em auto;
+        padding: 0.5em;
     }
 
     .info {
@@ -258,6 +259,7 @@ footer {
         display: flex;
         flex-direction: column;
         justify-content: safe center;
+        margin-bottom: 1em;
     }
 
     .botao-criptografar, .botao-descriptografar {
@@ -265,13 +267,33 @@ footer {
         margin: 0.3em auto;
     }
 
-    .campo-de-saida, #imagem-msg {
+    .campo-de-saida {
         width: 90%;
         margin: 1em auto;
+        padding: 1em;
     }
 
-    footer {
-        margin-top: 1em;
+    #caixa {
+        width: 90%;
+        height: 90%;
+        margin: 1em auto;
+        padding: 1em;
+    }
+
+    #mensagem {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0.5em;
+    }
+
+    #imagem-msg {
+        display: none;
+    }
+
+    #botao-copiar {
+        margin: 0 auto;
     }
 
     footer p {

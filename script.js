@@ -23,7 +23,7 @@ function atualizaAreaDeSaida() {
 function criptografa(stringParaCriptografar) {
     atualizaAreaDeSaida();
 
-    var matrizCodigo = [["a", "ai"], ["e", "enter"], ["i", "imes"], ["o", "ober"], ["u", "ufat"]];
+    var matrizCodigo = [["a", "ay"], ["e", "enter"], ["i", "imes"], ["o", "ober"], ["u", "ufat"]];
     stringParaCriptografar = stringParaCriptografar.toLowerCase();
 
     for(var i = 0; i < matrizCodigo.length; i++) {
@@ -43,7 +43,7 @@ function btCriptografar() {
 function descriptografa(stringCriptografada) {
     atualizaAreaDeSaida();
 
-    var matrizCodigo = [["ai", "a"], ["enter", "e"], ["imes", "i"], ["ober", "o"], ["ufat", "u"]];
+    var matrizCodigo = [["ay", "a"], ["enter", "e"], ["imes", "i"], ["ober", "o"], ["ufat", "u"]];
     stringCriptografada = stringCriptografada.toLowerCase();
 
     for(var i = 0; i < matrizCodigo.length; i++) {
