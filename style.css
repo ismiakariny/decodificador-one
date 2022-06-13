@@ -226,24 +226,56 @@ footer {
 
 @media screen and (max-width: 480px) {
     main {
+        width: 90%;
         margin: 0 auto;
         display: flex;
         justify-content: center safe;
         flex-direction: column;
     }
 
-    .campo-de-entrada {
-        width: 90%;
-        margin: 1em auto 0 auto;        
+    header {
+        margin-bottom: 5%;
     }
 
-    .campo-de-saida, #imagem-msg {
+    .campo-de-entrada {
         width: 90%;
-        margin: 1.5em auto 2em auto;
+        margin: 5% auto;        
+    }
+
+    #entrada-do-texto, #caixa {
+        width: 90%;
+        margin: 0 auto;
+        padding: 0.3em;
+    }
+
+    .info {
+        display: flex;
+        justify-content: center;
+        width: 100%;
     }
 
     .botoes-de-entrada {
         display: flex;
+        flex-direction: column;
+        justify-content: safe center;
+    }
+
+    .botao-criptografar, .botao-descriptografar {
+        width: 90%;
+        margin: 0.3em auto;
+    }
+
+    .campo-de-saida, #imagem-msg {
+        width: 90%;
+        margin: 1em auto;
+    }
+
+    footer {
+        margin-top: 1em;
+    }
+
+    footer p {
+        padding: 0.3em;
     }
 
 }
